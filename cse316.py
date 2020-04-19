@@ -38,7 +38,7 @@ void main()
  wt[0]=0;
   for(i=1;i<n;i++)
   {
-   wt[i]=wt[i-1]+et[i-1];
+   wt[i]=wt[i-1]+wt[i-1];
    totwt=totwt+wt[i];
    }  
 avgwt=(float)totwt/n;  
@@ -47,7 +47,7 @@ for(i=0;i<n;i++)
 {
    printf(" %s\t %d\t %d\t %d\n" ,p[i],pt[i],pr[i],wt[i]);
    }
-  printf("total waiting time=%d\n avg waiting time=%f",tot,avg);
+  printf("total waiting time=%d\n avg waiting time=%f",totwt,avgwt);
   getch();
    }
  
